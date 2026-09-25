@@ -1,69 +1,68 @@
 # Ex4 You are given a Java program that performs matrix addition. If Matrix A has all odd numbers and Matrix B has all even numbers of the same dimension, what will be the nature (even/odd/mixed) of the resulting matrix?
-
+## DATE: 30-07-2026
 ## AIM:
-To write a java function to evaluate weather the given Matrix A has all odd numbers and Matrix B has all even numbers of the same dimension and find the nature of resultant matrrix.
+To write a java function to evaluate weather the given Matrix A has all odd numbers and Matrix B has all even numbers of the same dimension and find the nature of resultant matrix.
 
 ## Algorithm
-
 1. Start the program.
-2. Read the number of rows rows and columns cols.
-3. Create three 2D arrays.
-4. Input elements for Matrix A.
-5. Input elements for Matrix B.
-6. Perform matrix addition
-7. After each row is printed, move to the next line.
-8. End the program.
-
+2. Declare two 2D arrays, A and B, of the same size.
+3. Initialize Matrix A with all odd numbers and Matrix B with all even numbers.
+4. Create another 2D array C to store the sum of corresponding elements of A and B.
+5. For each element position (i, j): `Compute C[i][j] = A[i][j] + B[i][j].`
+   
 ## Program:
-```
+```java
 /*
-Program to ind the nature of resultant matrrix.
+Program to find the nature of resultant matrix.
 Developed by: KANNADHASAN J
-RegisterNumber: 212224240071
+Register Number: 212224240071
 */
-import java.util.Scanner;
 
-public class MatrixAddition {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int rows, cols;
-
-       
-        rows = sc.nextInt();
-        cols = sc.nextInt();
-
-        int[][] A = new int[rows][cols];
-        int[][] B = new int[rows][cols];
-        int[][] sum = new int[rows][cols];
-
-        
-        for (int i = 0; i < rows; i++)
-            for (int j = 0; j < cols; j++)
-                A[i][j] = sc.nextInt();
-
-        
-        for (int i = 0; i < rows; i++)
-            for (int j = 0; j < cols; j++)
-                B[i][j] = sc.nextInt();
-
-        for (int i = 0; i < rows; i++)
-            for (int j = 0; j < cols; j++)
-                sum[i][j] = A[i][j] + B[i][j];
-
-        
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++)
-                System.out.print(sum[i][j] + " ");
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+    
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int[][] row=new int[a][b];
+        int[][] col=new int[a][b];
+        int[][] res=new int[a][b];
+        for(int i=0;i<a;i++){
+            for(int j=0;j<b;j++){
+                row[i][j]=sc.nextInt();
+            }
+        }
+    
+        for(int i=0;i<a;i++){
+            for(int j=0;j<b;j++){
+                col[i][j]=sc.nextInt();
+            }
+        }
+    
+        for(int i=0;i<a;i++){
+            for(int j=0;j<b;j++){
+                res[i][j]=row[i][j]+col[i][j];
+            }
+        }
+    
+        for(int i=0;i<a;i++){
+            for(int j=0;j<b;j++){
+                System.out.print(res[i][j]);
+                if(j<b-1){
+                    System.out.print(" ");
+                }
+            
+            }
             System.out.println();
         }
-        sc.close();
     }
 }
 ```
 
 ## Output:
+<img width="374" height="546" alt="image" src="https://github.com/user-attachments/assets/6f43e89f-7342-4e0d-aefe-68099b7b7546" />
 
-<img width="575" height="744" alt="image" src="https://github.com/user-attachments/assets/b31df123-eb14-4170-9367-96c2f4418264" />
 
 
 ## Result:
