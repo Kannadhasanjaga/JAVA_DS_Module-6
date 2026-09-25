@@ -1,10 +1,10 @@
 # Ex5 Count Inversions in an Array
-
+## DATE: 03-08-2026
 ## AIM:
 To write a Java program  to Count the number of inversions in an array where inversion is defined as: arr[i] > arr[j] and i < j
 
 ## Algorithm
-1. Start the program.
+1. Start the program. 
 2. Declare an array arr[] and a variable count = 0 to store the number of inversions.
 3. Read the array elements from the user.
 4. For each pair of elements (arr[i], arr[j]), check if arr[i] > arr[j] and i < j.
@@ -13,12 +13,13 @@ To write a Java program  to Count the number of inversions in an array where inv
 7. Display the total number of inversions found in the array and stop the program.
 
 ## Program:
-```
+```java
 /*
-Program toto Count the number of inversions in an array where inversion is defined as: arr[i] > arr[j] and i < j
-Developed by: KANNADHASAN J
-RegisterNumber: 212224240071
+Program to Count the number of inversions in an array where inversion is defined as: arr[i] > arr[j] and i < j
+Developed by:KANNADHASAN J
+Register Number: 212224240071
 */
+
 import java.util.Scanner;
 
 public class CountInversions {
@@ -47,7 +48,7 @@ public class CountInversions {
                 arr[k++] = leftArr[i++];
             } else {
                 arr[k++] = rightArr[j++];
-                swaps += (leftArr.length - i); 
+                swaps += (leftArr.length - i); // Count inversions
                 
             }
        
@@ -67,11 +68,12 @@ public class CountInversions {
         System.out.println(mergeSortAndCount(arr, 0, n - 1));
     }
 }
+
 ```
 
 ## Output:
+<img width="357" height="240" alt="image" src="https://github.com/user-attachments/assets/2fd053aa-21d5-439b-8af8-78fb80123460" />
 
-<img width="598" height="451" alt="image" src="https://github.com/user-attachments/assets/912cf65e-1735-48bc-a2ec-85e3e48b7caf" />
 
 
 ## Result:
