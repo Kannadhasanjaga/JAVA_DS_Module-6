@@ -1,55 +1,52 @@
-# EX3 Write a program to count the number of digits in an integer.
-
+# Ex3 Write a program to count the number of digits in an integer.
+## DATE: 30-07-2026
 ## AIM:
-To write a java program to count the number of digits in an integer.
+To write a Java program to count the number of digits in an integer.
 
 ## Algorithm
-2. Read an integer input num from the user.
-3. If num is equal to 0, then the number has 1 digit.
-4. Convert num to its absolute value to handle negative numbers.
-5. Initialize a counter variable count = 0.
-6. Repeat the following steps while num > 0:
-Divide num by 10 (integer division).
-Increment count by 1.
-7. After the loop ends, count will contain the number of digits.
-8.  Display the value of count.
-9. End the program.  
+1. Start the program.
+2. Declare an integer variable n and count = 0.
+3. Read the integer number n from the user.
+4. If n is 0, then the count of digits is 1.
+5. Otherwise, Repeat the steps while n is not equal to 0. Divide n by 10. Increment count by 1.
+6. Display the value of count.
+7. Stop the program.
 
 ## Program:
-```
+```java
 /*
 Program to to count the number of digits in an integer
 Developed by: KANNADHASAN J
-RegisterNumber: 212224240071
+Register Number: 212224240071
 */
+
 import java.util.Scanner;
 
 public class CountDigits {
-
-    public static int countDigits(int num) {
-        int count = 0;
-        if (num == 0) return 1; 
-        num = Math.abs(num);   
-        while (num > 0) {
-            count++;
-            num /= 10;
-        }
-        return count;
-    }
-
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
+        int num, count = 0;
 
-        int digits = countDigits(num);
-        System.out.println("Number of digits: " + digits);
+        System.out.print("Enter an integer: ");
+        num = sc.nextInt();
+
+        if (num == 0) {
+            count = 1;
+        } else {
+            while (num != 0) {
+                num = num / 10;
+                count++;
+            }
+        }
+
+        System.out.println("Number of digits: " + count);
+        sc.close();
     }
 }
 ```
 
 ## Output:
-
-<img width="785" height="301" alt="image" src="https://github.com/user-attachments/assets/262f4a30-0311-4cd3-82de-b44843630170" />
+<img width="543" height="180" alt="image" src="https://github.com/user-attachments/assets/2e4cd75f-cb9c-461e-a79c-e7dec98ff288" />
 
 
 
